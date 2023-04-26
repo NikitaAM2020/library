@@ -1,0 +1,39 @@
+.footer {
+  background-color: var(--color-primary);
+  margin-top: 64px;
+  color: var(--color-white);
+  padding: 32px 16px 32px 16px;
+}
+
+.line1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.line11 {
+  display: flex;
+}
+
+.el {
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+.svg {
+  margin-top: 16px;
+}
+
+.icon {
+  padding-left: 16px;
+  cursor: pointer;
+}
+
+.p {
+  margin-top: 16px;
+}

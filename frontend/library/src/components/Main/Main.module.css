@@ -1,0 +1,43 @@
+.title {
+  font-size: 96px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.h4 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+img {
+  width: 100%;
+  /* height: auto; */
+  object-fit: cover;
+}
+
+.img {
+    margin-top: 24px;
+}
+
+button {
+    background: var(--color-primary);
+    color: var(--color-white);
+    width: 295px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+.cta {
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+}

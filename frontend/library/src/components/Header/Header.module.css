@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content:space-between;
+    padding: 16px;
+    border-bottom: 1px solid var(--color-black);
+    color: var(--color-black);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.el {
+    padding-left: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
