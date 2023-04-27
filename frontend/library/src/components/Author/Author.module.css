@@ -1,0 +1,25 @@
+.h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 56px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    margin-top: 56px;
+}
+
+img {
+    padding-left: 16px;
+    width: 294px;
+    height: auto;
+}
+
+.info {
+    margin-left: 182px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    letter-spacing: 5%;
+    font-weight: 600;
+}
