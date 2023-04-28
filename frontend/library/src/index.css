@@ -18,7 +18,7 @@ code {
     --color-white: #FDFBFB;
     --color--scrollbar: #E8E9D1;
     --color-black: #121314;
-    --color-black80: rgba(18, 19, 20, 0.8)
+    --color-black80: rgba(18, 19, 20, 0.8);
     
 
     --transition: all 400ms ease;

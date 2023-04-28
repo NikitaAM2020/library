@@ -1,17 +1,23 @@
-import './App.css';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
-import Author from './components/Author/Author';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
+import Author from "./components/Author/Author";
+import Books from "./components/Books/Books";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      {/* <Main /> */}
-      <Author />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/*" element={<Main />} />
+          <Route path="/author" element={<Author />} />
+          <Route path="/books" element={<Books />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

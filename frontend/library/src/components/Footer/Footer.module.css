@@ -39,3 +39,14 @@
 .p {
   margin-top: 16px;
 }
+
+.item {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.item:hover {
+  font-weight: 700;
+  transition: font-weight 0.2s ease;
+  color: var(--color-footer);
+}

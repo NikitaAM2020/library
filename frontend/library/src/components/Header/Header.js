@@ -1,7 +1,9 @@
 import React from 'react'
 import style from "./Header.module.css";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const setActive = ({ isActive }) => (isActive ? style.active : style.item);
   return (
     <header className={style.header}>
       <div>
@@ -26,9 +28,21 @@ const Header = () => {
         </svg>
       </div>
       <div className={style.nav}>
-        <div className={style.el}>Головна</div>
-        <div className={style.el}>Книжки</div>
-        <div className={style.el}>Автор</div>
+        <div className={style.el}>
+          <NavLink className={`${setActive} ${style.item}`} to="/Main">
+            Головна
+          </NavLink>
+        </div>
+        <div className={style.el}>
+          <NavLink className={`${setActive} ${style.item}`} to="/Books">
+            Книжки
+          </NavLink>
+        </div>
+        <div className={style.el}>
+          <NavLink className={`${setActive} ${style.item}`} to="/Author">
+            Автор
+          </NavLink>
+        </div>
       </div>
     </header>
   );

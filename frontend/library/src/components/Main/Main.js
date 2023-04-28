@@ -9,11 +9,11 @@ const Main = () => {
       <div className={style.h4}>
         Бібліотеки - це скарбниці всіх багатств людства
       </div>
-      <div className={style.img}>
-        <img src={imgMain} alt="Logo" />
+      <div>
+        <img className={style.img} src={imgMain} alt="Logo" />
       </div>
       <div className={style.cta}>
-        <button>Пошук</button>
+        <button className={style.button}>Пошук</button>
       </div>
     </div>
   );
