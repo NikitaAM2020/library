@@ -1,8 +1,13 @@
 import React from "react";
 import style from "./Books.module.css";
 import img1 from "./Photo/1.jpg";
+import { useNavigate } from "react-router-dom";
 
-const Books = () => {
+const Books = (props) => {
+  const navigate = useNavigate();
+  const goto = () => {
+    navigate("/MoreBook/" /*+ props.id*/);
+  };
   return (
     <div>
       <div className={style.h1}>Пошук</div>
@@ -22,7 +27,9 @@ const Books = () => {
             <div className={style.title}>Незриме життя Адді Лярю</div>
             <div className={style.author}>В. Е. Шваб</div>
           </div>
-          <button className={style.button}>Детальніше</button>
+          <button className={style.button} onClick={goto}>
+            Детальніше
+          </button>
         </div>
         <div className={style.book}>
           <div className={style.img}>

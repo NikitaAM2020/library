@@ -1,0 +1,59 @@
+.h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 56px;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.content {
+  margin: 56px 100px;
+  display: flex;
+}
+
+.img {
+  width: 295px;
+  height: 444px;
+}
+
+.info {
+  margin-left: 178px;
+}
+
+.info_l {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.info_r {
+  font-size: 24px;
+  font-weight: 700;
+  width: 500px;
+}
+
+.data_item {
+  display: flex;
+  border-bottom: 1px solid var(--color-black80);
+  padding-bottom: 23px;
+  margin-bottom: 23px;
+  gap: 20px;
+}
+
+.btn {
+  text-align: end;
+  margin-top: 89px;
+}
+
+.button {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  width: 295px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-transform: uppercase;
+}
