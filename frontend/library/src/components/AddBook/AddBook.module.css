@@ -1,0 +1,45 @@
+.h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 56px;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.form {
+  /* display: flex; */
+  margin: 56px auto;
+  width: 536px;
+  height: auto;
+}
+
+.label {
+  margin-top: 8px;
+}
+
+.input {
+  width: 536px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid var(--color-black80);
+  margin: 8px;
+}
+
+.button {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  width: 295px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 24px;
+}

@@ -21,7 +21,7 @@ const Main = () => {
           </NavLink>
         </button>
         <button className={style.button}>
-          <NavLink className={style.button} /*to="/Books"*/>
+          <NavLink className={style.button} to="/AddBook">
             Додати книгу
           </NavLink>
         </button>

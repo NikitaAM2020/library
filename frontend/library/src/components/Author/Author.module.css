@@ -3,6 +3,7 @@
     font-weight: 700;
     margin-top: 56px;
     text-align: center;
+    color: var(--color-primary);
 }
 
 .content {
