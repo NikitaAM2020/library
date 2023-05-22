@@ -73,7 +73,7 @@ const Footer = () => {
           </a>
           <a
             className={`${setActive} ${style.item}`}
-            href="https://github.com/NikitaAM2020"
+            href="https://github.com/NikitaAM2020/library"
           >
             <div className={style.icon}>
               <svg

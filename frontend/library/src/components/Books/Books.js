@@ -86,21 +86,7 @@ const Books = (props) => {
       <div className={style.buttonMore}>
         <button className={style.button}>Показати ще</button>
       </div>
-      {/* <Paper elevation={3} style={paperStyle}>
-        {books.map((library) => (
-          <Paper
-            elevation={6}
-            style={{ margin: "10px", padding: "15px", textAlign: "left" }}
-            key={library.id}
-          >
-            Id:{library.id}
-            <br />
-            Name:{library.author}
-            <br />
-            Address:{library.bookname}
-          </Paper>
-        ))}
-      </Paper> */}
+      
     </div>
   );
 };
