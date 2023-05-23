@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./Books.module.css";
-import img1 from "./Photo/1.jpg";
 import { useNavigate } from "react-router-dom";
-import { Container, Paper, Button } from "@material-ui/core";
 import axios from "axios";
 
 const Books = (props) => {

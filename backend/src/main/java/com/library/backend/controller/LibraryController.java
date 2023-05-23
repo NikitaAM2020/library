@@ -1,10 +1,12 @@
 package com.library.backend.controller;
 
+import com.library.backend.exception.BookNotFoundException;
 import com.library.backend.model.Library;
-import com.library.backend.service.LibraryService;
+import com.library.backend.repository.LibraryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.print.Book;
 import java.util.List;
 
 @RestController
@@ -12,17 +14,21 @@ import java.util.List;
 @CrossOrigin("http://localhost:3000")
 public class LibraryController {
     @Autowired
-    private LibraryService libraryService;
+    private LibraryRepository libraryRepository;
 
     @PostMapping("/add")
-    public String add(@RequestBody Library library) {
-        libraryService.saveLibrary(library);
-        return "New book is added";
+    Library add(@RequestBody Library library) {
+        return libraryRepository.save(library);
     }
 
     @GetMapping("/getAll")
-    public List<Library> getAllBooks(){
-        return libraryService.getAllBooks();
+    List<Library> getAllBooks(){
+        return libraryRepository.findAll();
     }
 
+    @GetMapping("/book/{id}")
+    Library getBookById(@PathVariable int id) {
+        return libraryRepository.findById(id)
+                .orElseThrow(()->new BookNotFoundException(id));
+    }
 }
