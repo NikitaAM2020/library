@@ -43,6 +43,8 @@
   background: var(--color-primary);
   color: var(--color-white);
   text-transform: uppercase;
+  margin-bottom: 8px;
+  text-decoration: none;
 }
 
 .author {

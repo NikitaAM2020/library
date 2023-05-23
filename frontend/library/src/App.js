@@ -6,6 +6,7 @@ import Author from "./components/Author/Author";
 import Books from "./components/Books/Books";
 import MoreBook from "./components/MoreBook/MoreBook";
 import AddBook from "./components/AddBook/AddBook";
+import EditBook from "./components/EditBook/EditBook";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
           <Route path="/*" element={<Main />} />
           <Route path="/author" element={<Author />} />
           <Route path="/books" element={<Books />} />
-          <Route path={"/MoreBook"} element={<MoreBook />} />
+          <Route path={"/MoreBook/:id"} element={<MoreBook />} />
           <Route path={"/addBook"} element={<AddBook />} />
+          <Route path={"/EditBook/:id"} element={<EditBook />} />
         </Routes>
         <Footer />
       </div>

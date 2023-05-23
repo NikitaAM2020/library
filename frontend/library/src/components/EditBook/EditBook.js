@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import style from "./AddBook.module.css";
+import React, { useEffect, useState } from "react";
+import style from "./EditBook.module.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const AddBook = () => {
+const EditBook = () => {
   let navigate = useNavigate();
+
+  const { id } = useParams();
 
   const [book, setBook] = useState({
     bookname: "",
@@ -17,18 +19,26 @@ const AddBook = () => {
 
   const onInputChange = (e) => {
     setBook({ ...book, [e.target.name]: e.target.value });
-    
   };
+
+  useEffect(() => {
+    loadBook();
+  }, []);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/books/add", book);
-    navigate("/");
+    await axios.put(`http://localhost:8080/books/book/${id}`, book);
+    navigate("/Books");
+  };
+
+  const loadBook = async () => {
+    const result = await axios.get(`http://localhost:8080/books/book/${id}`);
+    setBook(result.data);
   };
 
   return (
     <div>
-      <div className={style.h1}>Додавання книжки</div>
+      <div className={style.h1}>Редагування книжки</div>
       <form onSubmit={(e) => onSubmit(e)} className={style.form}>
         <div>
           <div>Назва</div>
@@ -75,7 +85,7 @@ const AddBook = () => {
           />
         </div>
         <div className={style.btn}>
-          <button className={style.button}>Додати</button>
+          <button className={style.button}>Зберігти</button>
           <button className={style.buttonCancel}>Скасувати</button>
         </div>
       </form>
@@ -83,4 +93,4 @@ const AddBook = () => {
   );
 };
 
-export default AddBook;
+export default EditBook;

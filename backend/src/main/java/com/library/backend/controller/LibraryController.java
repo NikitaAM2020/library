@@ -22,13 +22,34 @@ public class LibraryController {
     }
 
     @GetMapping("/getAll")
-    List<Library> getAllBooks(){
+    List<Library> getAllBooks() {
         return libraryRepository.findAll();
     }
 
     @GetMapping("/book/{id}")
     Library getBookById(@PathVariable int id) {
         return libraryRepository.findById(id)
-                .orElseThrow(()->new BookNotFoundException(id));
+                .orElseThrow(() -> new BookNotFoundException(id));
+    }
+
+    @PutMapping("/book/{id}")
+    Library updateBook(@RequestBody Library newBook, @PathVariable int id) {
+        return libraryRepository.findById(id)
+                .map(book -> {
+                    book.setBookname(newBook.getBookname());
+                    book.setAuthor(newBook.getAuthor());
+                    book.setYear(newBook.getYear());
+                    book.setNumber(newBook.getNumber());
+                    return libraryRepository.save(book);
+                }).orElseThrow(() -> new BookNotFoundException(id));
+    }
+
+    @DeleteMapping("/book/{id}")
+    String deleteBook(@PathVariable int id) {
+        if (!libraryRepository.existsById(id)) {
+            throw new BookNotFoundException(id);
+        }
+        libraryRepository.deleteById(id);
+        return "Book with id " + id + " has been deleted success.";
     }
 }

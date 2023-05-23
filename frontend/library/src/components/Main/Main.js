@@ -22,9 +22,10 @@ const Main = () => {
         </button>
         <button className={style.button}>
           <NavLink className={style.button} to="/AddBook">
-            Додати книгу
+            Додати книжку
           </NavLink>
         </button>
+        
       </div>
     </div>
   );

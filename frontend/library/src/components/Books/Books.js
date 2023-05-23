@@ -1,25 +1,22 @@
 import React, { useEffect, useState } from "react";
 import style from "./Books.module.css";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 const Books = (props) => {
   const [books, setBooks] = useState([]);
-  const navigate = useNavigate();
-  
-  const goto = () => {
-    navigate("/MoreBook/" /*+ props.id*/);
-  };
+
+  const { id } = useParams();
 
   useEffect(() => {
     loadBooks();
-    
-  },[]);
+  }, []);
 
-  const loadBooks =async()=>{
-    const result =await axios.get("http://localhost:8080/books/getAll");
+  const loadBooks = async () => {
+    const result = await axios.get("http://localhost:8080/books/getAll");
     setBooks(result.data);
-  }
+  };
+
   return (
     <div>
       <div className={style.h1}>Книги</div>
@@ -37,8 +34,10 @@ const Books = (props) => {
               <div className={style.title}>{book.bookname}</div>
               <div className={style.author}>{book.author}</div>
             </div>
-            <button className={style.button} onClick={goto}>
-              Детальніше
+            <button className={style.button}>
+              <NavLink className={style.button} to={`/MoreBook/${book.id}`}>
+                Детальніше
+              </NavLink>
             </button>
           </div>
         ))}
