@@ -72,7 +72,7 @@
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  color: var(--color-black);
+  color: var(--color-primary);
   background: var(--color-white);
   text-transform: uppercase;
 }
