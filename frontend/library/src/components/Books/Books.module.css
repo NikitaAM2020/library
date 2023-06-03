@@ -1,3 +1,82 @@
+/* .input {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 56px;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.search {
+  width: 926px;
+  height: 56px;
+  border: 1px solid var(--color-black80);
+  border-radius: 5px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  padding: 19px 8px;
+  background-color: var(--color-white);
+}
+
+.content {
+  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 64px 100px 0 100px;
+  text-align: center;
+  gap: 20px;
+}
+
+.button {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  width: 295px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.author {
+  padding-top: 16px;
+  font-size: 18px;
+  color: var(--color-black80);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.textContent {
+  margin: 20px 0 20px;
+}
+
+.buttonMore {
+  text-align: center;
+  margin: 96px 0;
+}
+
+.sortBtn {
+  display: flex;
+  gap: 20px;
+  margin-top: 16px;
+  justify-content: center;
+  text-align: center;
+} */
+
+
+/* Загальні стилі для десктопної версії */
 .input {
   text-align: center;
   margin-top: 56px;
@@ -73,4 +152,58 @@
   margin-top: 16px;
   justify-content: center;
   text-align: center;
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+  .input {
+    margin-top: 20px;
+  }
+
+  .h1 {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+
+  .search {
+    width: 100%;
+    max-width: 320px;
+    height: 40px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .content {
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 10px 0 10px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 100%;
+    max-width: 200px;
+    height: 32px;
+  }
+
+  .author {
+    padding-top: 8px;
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .textContent {
+    margin: 10px 0 10px;
+  }
+
+  .buttonMore {
+    margin: 20px 0;
+  }
+
+  .sortBtn {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }

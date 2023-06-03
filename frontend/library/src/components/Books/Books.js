@@ -3,7 +3,7 @@ import style from "./Books.module.css";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
-const Books = (props) => {
+const Books = () => {
   const [books, setBooks] = useState([]);
   const [sortedByTitle, setSortedByTitle] = useState(false);
   const [sortedByYear, setSortedByYear] = useState(false);
@@ -54,7 +54,7 @@ const Books = (props) => {
 
   return (
     <div>
-      <div className={style.h1}>Книги</div>
+      <div className={style.h1}>Книжки</div>
 
       <div className={style.input}>
         <input
